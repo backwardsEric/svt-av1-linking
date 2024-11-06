@@ -1,8 +1,9 @@
-#include <stdio.h>
+#include <windows.h>
 #include <EbSvtAv1Enc.h>
 
-int main(int argc, char *argv[])
+INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
+		PSTR lpCmdLine, INT nCmdShow)
 {
-	(void) printf("SvtAv1 version: %s\n", svt_av1_get_version());
+	(void)svt_av1_get_version();
 	return 0;
 }
