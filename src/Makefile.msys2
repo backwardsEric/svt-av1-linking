@@ -1,0 +1,14 @@
+CC := gcc
+
+WARNINGS = -W -Wall -Wextra -Wno-unused-parameter \
+	-Wno-missing-field-initializers -Wwrite-strings -Wmissing-prototypes \
+	-Wnested-externs -Wshadow -Wunused-macros
+CFLAGS := -std=c99 -g -O2 $(WARNINGS) -pedantic
+LDFLAGS := -Wl,-Bstatic -Wl,-v -Wl,--trace-symbol=svt_av1_get_version -lSvtAv1Enc
+
+check.exe : check.o
+	$(CC) -v
+	$(CC) -o $(EXE) check.o $(CFLAGS) $(LDFLAGS)
+
+%.o: %.c
+	$(CC) -o $@ -c $< $(CFLAGS)
