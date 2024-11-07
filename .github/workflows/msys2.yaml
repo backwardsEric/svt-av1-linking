@@ -33,6 +33,6 @@ jobs:
           uname
           echo $MSYSTEM
           cd src
-          objdump -f /mingw64/lib/libSvtAv1Enc.a
+          objdump -f -t /mingw64/lib/libSvtAv1Enc.a
           nm /mingw64/lib/libSvtAv1Enc.a | grep svt_av1_get_version
           make -f Makefile.msys2
