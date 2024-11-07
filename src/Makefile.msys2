@@ -9,7 +9,7 @@ LIBS := -lSvtAv1Enc
 
 check.exe : check.o
 	$(CC) -v
-	$(CC) -o $(EXE) $(LDFLAGS) check.o $(LIBS))
+	$(CC) -o $(EXE) $(LDFLAGS) check.o $(LIBS)
 
 %.o: %.c
 	$(CC) -o $@ -c $< $(CFLAGS)
