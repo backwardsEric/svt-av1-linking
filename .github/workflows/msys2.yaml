@@ -30,6 +30,8 @@ jobs:
 
       - name: Build
         run: |
+          uname
+          echo $MSYSTEM
           cd src
           objdump -f /mingw64/lib/libSvtAv1Enc.a
           nm /mingw64/lib/libSvtAv1Enc.a | grep svt_av1_get_version
