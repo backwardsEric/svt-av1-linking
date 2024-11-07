@@ -4,7 +4,7 @@ WARNINGS = -W -Wall -Wextra -Wno-unused-parameter \
 	-Wno-missing-field-initializers -Wwrite-strings -Wmissing-prototypes \
 	-Wnested-externs -Wshadow -Wunused-macros
 CFLAGS := -std=c99 -g -O2 $(WARNINGS) -pedantic -I/mingw64/include/svt-av1
-LDFLAGS := -mconsole -static -Wl,-v -Wl,--trace-symbol=svt_av1_get_version
+LDFLAGS := -mconsole -flto -static -Wl,-v -Wl,--trace-symbol=svt_av1_get_version
 LIBS := -lSvtAv1Enc
 
 check.exe : check.o
